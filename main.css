@@ -1,0 +1,8 @@
+.social-icon:hover {
+    background-color: green;
+}
+
+.social-icon {
+    height: 2em;
+    width: 2em;
+}
