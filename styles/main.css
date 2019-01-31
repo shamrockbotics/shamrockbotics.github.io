@@ -1,8 +1,17 @@
 .social-icon:hover {
-    background-color: green;
+    background-color: #339c5e;
 }
 
 .social-icon {
     height: 2em;
     width: 2em;
+}
+
+.card {
+    padding: 15px;
+ }
+
+ .header {
+    background-color: white;
+    padding: 15px 15px 5px 15px;
 }
