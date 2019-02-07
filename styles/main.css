@@ -15,6 +15,15 @@
     background-color: white;
     padding: 15px 15px 5px 15px;
 }
-#Welcome {
+.Welcome {
     text-align: center;
 }
+
+.team6954 {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    width:50%;
+}
+        
