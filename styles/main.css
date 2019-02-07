@@ -21,10 +21,10 @@
 
 .team6956members {
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
     height: 50%;
     width:50%;
-    z-index: 10
+    z-index: 10;
+    align: center;
+        
 }
         
