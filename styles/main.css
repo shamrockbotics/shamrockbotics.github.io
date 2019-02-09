@@ -18,7 +18,11 @@
 .Welcome {
     text-align: center;
 }
-
+#calendar{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+}
 .team6956members {
    
      
