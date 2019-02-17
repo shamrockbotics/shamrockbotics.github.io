@@ -6144,7 +6144,7 @@ button.close {
 
 .carousel-inner {
     position: relative;
-    width: 100%;
+    width: 80%;
     overflow: hidden
 }
 
@@ -6587,7 +6587,7 @@ button.bg-dark:hover {
 }
 
 .d-block {
-    display: block!important
+    display: inline-table!important
 }
 
 .d-table {
@@ -7677,7 +7677,7 @@ button.bg-dark:hover {
 }
 
 .w-100 {
-    width: 100%!important;
+    width: 80%!important;
 }
 
 .h-25 {
