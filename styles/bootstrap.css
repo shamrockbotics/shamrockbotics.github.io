@@ -1,12 +1,3 @@
-.social-icon:hover {
-    background-color: green;
-}
-
-.social-icon {
-    height: 2em;
-    width: 2em;
-}
-
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -6144,7 +6135,7 @@ button.close {
 
 .carousel-inner {
     position: relative;
-    width: 80%;
+    width: 100%;
     overflow: hidden
 }
 
@@ -6587,7 +6578,7 @@ button.bg-dark:hover {
 }
 
 .d-block {
-    display: inline-table!important
+    display: block!important
 }
 
 .d-table {
@@ -7677,7 +7668,7 @@ button.bg-dark:hover {
 }
 
 .w-100 {
-    width: 80%!important;
+    width: 100%!important;
 }
 
 .h-25 {
@@ -9279,5 +9270,3 @@ a.text-dark:hover {
         border: 1px solid #ddd!important
     }
 }
-
-/*# sourceMappingURL=bootstrap.min.css.map */
