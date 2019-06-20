@@ -7,6 +7,15 @@
     width: 2em;
 }
 
+.rainbow-icon {
+    height:2em;
+    width: 2em;
+}
+
+.rainbow-icon:hover {
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+
 .card {
     padding: 15px;
  }
