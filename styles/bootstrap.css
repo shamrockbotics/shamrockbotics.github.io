@@ -6578,7 +6578,11 @@ button.bg-dark:hover {
 }
 
 .d-block {
-    display: block!important
+    width: 1100px;
+    display: block!important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
 }
 
 .d-table {
