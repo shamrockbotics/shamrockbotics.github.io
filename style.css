@@ -151,11 +151,10 @@
     text-transform: capitalize;
   }
   #home-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
   }
   .container {
     padding: 64px
@@ -251,10 +250,4 @@
 }
 .calender-format {
   padding-left: 25px
-}
-#home-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
 }
