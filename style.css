@@ -252,3 +252,9 @@
 .calender-format {
   padding-left: 25px
 }
+#home-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
