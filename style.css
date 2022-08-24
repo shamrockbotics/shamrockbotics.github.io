@@ -168,27 +168,27 @@
     display: table;
     clear: both
   }
-  
+
   .column-66 {
     float: left;
     width: 66.66666%;
     padding: 20px;
   }
-  
+
   .column-33 {
     float: left;
     width: 33.33333%;
     padding: 20px;
   }
-  
+
   .large-font {
     font-size: 48px;
   }
-  
+
   .xlarge-font {
     font-size: 64px
   }
-  
+
   .button {
     border: none;
     color: white;
@@ -197,13 +197,13 @@
     cursor: pointer;
     background-color: #4CAF50;
   }
-  
+
   img {
     display: block;
     height: auto;
     max-width: 100%;
   }
-  
+
   @media screen and (max-width: 1000px) {
     .column-66,
     .column-33 {
@@ -243,12 +243,12 @@
   width: 70%;
 }
 .resource-format {
-  font-size: 20px;  
+  font-size: 20px;
 }
 .resource-format h4 {
   text-align: center;
-  font-size: 40px;  
+  font-size: 40px;
 }
 .calender-format {
-  padding-left: 25px
+  text-align: center;
 }
