@@ -35,6 +35,7 @@
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
+    text-decoration: none;
   }
   a.active,a:hover{
     background: #247947;
@@ -218,6 +219,10 @@
     text-decoration: none;
     color: inherit;
  }
+ a{
+   color: #339c5e;
+   text-decoration: underline;
+}
  .fll-content {
   padding-top: 0px;
   margin-left: 300px;
