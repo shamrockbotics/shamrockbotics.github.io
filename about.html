@@ -8,6 +8,27 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            /* grid-auto-columns: 10%;
+            grid-auto-rows: 10%; */
+            /* justify-items: stretch;
+            align-items: stretch; */
+            gap: 20px 20px;
+            width: 100vw;
+            height: 100vh;
+        }
+        #main_text {
+            grid-row: 1 / -1;
+        }
+        .emphasize {
+            color: #339c5e;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,23 +40,20 @@
         <label class="logo">SHAM-ROCK-BOTICS</label>
         <ul>
             <li><a href="./index.html">Home</a></li>
-			 <li><a class="active" href="./about.html">About</a></li>
+             <li><a class="active" href="./about.html">About</a></li>
             <li><a href="./fllexplore.html">FLL Explore</a></li>
             <li><a href="./partners.html">Partners</a></li>
             <li><a href="./events.html">Events</a></li>
             <li><a href="./socialmedia.html">Social Media</a></li>
-			<li><a href="./resources.html">Team Resources</a></li>
+            <li><a href="./resources.html">Team Resources</a></li>
         </ul>
     </nav>
-
-
-		 <img src="./images/About_Page.jpg" width="2500" height="471">
-
-
-
-
-
-
+    <div class="container">
+    <p class="item" id="main_text">SHAM-ROCK-BOTICS is a FIRST Robotics team created in August of 2017 by eight FIRST alumni members. Currently, our team has 25 members and nine mentors. Each member has integral roles in both the robot-building and culture sides of our team. Each student chooses a culture project, such as our website, business administration, or team branding. Thanks to our teamwork, we can split up the work of designing, programming, building, and wiring the robot. Teamwork and an emphasis on learning social, career, and educational skills that will one day help each individual succeed in the workforce are examples of what makes our team a great, hands-on learning opportunity that no other school program will accomodate. </p>
+    <img class="item" src="./test_images/1.jpg" alt="1">
+    <img class="item" src="./test_images/2.jpg" alt="2">
+    <img class="item" src="./test_images/3.png" alt="3">
+    </div>
     <footer>
         <div class="footer-content">
             <h3>SHAM-ROCK-BOTICS</h3>
