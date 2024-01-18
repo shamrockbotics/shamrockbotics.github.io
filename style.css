@@ -11,15 +11,20 @@
   nav{
     background: #339c5e;
     height: 80px;
+    line-height: 80px;
     width: 100%;
   }
   label.logo{
-    color: #ffe000;
-    font-size: 35px;
-    line-height: 80px;
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
     padding: 0px 30px;
-    font-weight: bold;
   }
+  .logo a:hover, .logo a:active{
+    background: inherit;
+    color: inherit;
+  }
+  /* big thanks to https://www.w3docs.com/snippets/css/how-to-vertically-align-inline-inline-block-elements.html for this solution */
   nav ul{
     float: right;
     margin-right: 20px;
