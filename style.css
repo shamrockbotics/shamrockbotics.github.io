@@ -166,6 +166,10 @@
   .container {
     padding: 64px
   }
+  .container span {
+    color: #339c5e;
+    font-weight: bold;
+  }
   .row {
     padding-left: 170px;
   }
