@@ -36,14 +36,20 @@
   }
   nav ul li a{
     color: #ffe000;
+    color: white;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
     text-decoration: none;
   }
+  .join_button {
+    color: #247947;
+    background: #ffe000;
+  }
   a.active,a:hover{
     background: #247947;
+    color: #ffe000;
     transition: .5s;
   }
   .checkbtn{
@@ -226,7 +232,6 @@
   }
   a, a:hover, a:focus, a:active {
     text-decoration: none;
-    color: inherit;
  }
  a{
    color: #339c5e;
