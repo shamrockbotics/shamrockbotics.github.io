@@ -5,12 +5,6 @@ var config_data = `
   "page_title": "Crescendo",
   "checkboxAs": "10",
   "prematch": [
-    { "name": "Event",
-      "code": "e",
-      "type": "event",
-      "defaultValue": "2023tnkn",
-      "required": "false"
-    },
     { "name": "Match #",
       "code": "m",
       "type": "match",
@@ -37,13 +31,10 @@ var config_data = `
       "min": 1,
       "max": 99999
     },
-    { "name": "Auto Start Position",
-      "code": "as",
-      "type": "clickable_image",
-      "filename": "2024/field_image.png",
-      "clickRestriction": "one",
-      "allowableResponses": "1 12 13 24 25 36 37 48 49 60 61 72",
-      "shape": "circle 5 black red true"
+    { "name": "My Checkbox",
+      "code": "mc",
+      "type": "checkbox",
+      "tooltip": "Put help or more descriptive text here"
     }
   ],
   "auton": [
