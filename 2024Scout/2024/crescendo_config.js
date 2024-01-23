@@ -1,10 +1,31 @@
 var config_data = `
 {
   "dataFormat": "tsv",
-  "title": "Scouting PASS 2024",
-  "page_title": "Crescendo",
+  "title": "Scouting 2024",
+  "page_title": "Crescendo!",
   "checkboxAs": "10",
   "prematch": [
+    { "name": "Scouter Initials",
+      "code": "s",
+      "type": "scouter",
+      "size": 5,
+      "maxSize": 5,
+    },
+    { "name": "Event",
+      "code": "e",
+      "type": "event",
+      "defaultValue": "2023tnkn",
+    },
+    { "name": "Match Level",
+      "code": "l",
+      "type": "level",
+      "choices": {
+        "qm": "Quals<br>",
+        "sf": "Semifinals<br>",
+        "f": "Finals"
+      },
+      "defaultValue": "qm",
+    },
     { "name": "Match #",
       "code": "m",
       "type": "match",
@@ -23,7 +44,7 @@ var config_data = `
         "r3": "Red-3",
         "b3": "Blue-3"
       },
-      "required":"true"
+      "required": "true"
     },
     { "name": "Team #",
       "code": "t",
@@ -31,10 +52,13 @@ var config_data = `
       "min": 1,
       "max": 99999
     },
-    { "name": "My Checkbox",
-      "code": "mc",
-      "type": "checkbox",
-      "tooltip": "Put help or more descriptive text here"
+    { "name": "Auto Start Position",
+      "code": "as",
+      "type": "clickable_image",
+      "filename": "2024/field_image.png",
+      "clickRestriction": "one",
+      "allowableResponses": "1 12 13 24 25 36 37 48 49 60 61 72",
+      "shape": "circle 5 black red true"
     }
   ],
   "auton": [
