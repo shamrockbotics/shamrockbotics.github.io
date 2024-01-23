@@ -5,13 +5,6 @@ var config_data = `
   "page_title": "Crescendo",
   "checkboxAs": "10",
   "prematch": [
-    { "name": "Scouter Initials",
-      "code": "s",
-      "type": "scouter",
-      "size": 5,
-      "maxSize": 5,
-      "required": "false"
-    },
     { "name": "Event",
       "code": "e",
       "type": "event",
