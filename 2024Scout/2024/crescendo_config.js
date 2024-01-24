@@ -1,20 +1,22 @@
 var config_data = `
 {
   "dataFormat": "tsv",
-  "title": "Scouting 2024",
-  "page_title": "Crescendo!",
+  "title": "Scouting PASS 2024",
+  "page_title": "Crescendo",
   "checkboxAs": "10",
   "prematch": [
     { "name": "Scouter Initials",
       "code": "s",
       "type": "scouter",
-      "size": 5",s
-      "maxSize": 5",
+      "size": 5,
+      "maxSize": 5,
+      "required": "false"
     },
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2023tnkn",
+      "defaultValue": "",
+      "required": "false"
     },
     { "name": "Match Level",
       "code": "l",
@@ -25,6 +27,7 @@ var config_data = `
         "f": "Finals"
       },
       "defaultValue": "qm",
+      "required": "true"
     },
     { "name": "Match #",
       "code": "m",
@@ -44,7 +47,7 @@ var config_data = `
         "r3": "Red-3",
         "b3": "Blue-3"
       },
-      "required": "true"
+      "required":"true"
     },
     { "name": "Team #",
       "code": "t",
