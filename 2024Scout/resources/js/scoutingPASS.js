@@ -875,7 +875,7 @@ function updateQRHeader() {
 
 
 function qr_regenerate() {
-  // Validate required pre-match date (event, match, level, robot, scouter)
+  // Validate required pre-match date (event, match, level, robot)
   if (!pitScouting) {  
     if (validateData() == false) {
       // Don't allow a swipe until all required data is filled in

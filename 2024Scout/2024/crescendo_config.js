@@ -8,7 +8,7 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "INMIS", 
+      "defaultValue": "INCMP", 
       "required": "false"
     },
     { "name": "Match Level",
