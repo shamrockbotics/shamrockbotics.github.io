@@ -72,8 +72,18 @@ html, body{
 
 #prematch, #auton, #teleop, #endgame, #postmatch {
     display: table;
-    background-color: black;
-    color: white;
+}
+
+#auton{
+}
+
+#teleop{
+}
+
+#endgame{
+}
+
+#postmatch{
 }
 
 #qr-code{
