@@ -68,13 +68,12 @@ var config_data = `
       "code": "tas",
       "type": "counter"
     },
-    { "name": "Speaker Scores",
+    { "name": "Amplified Speaker Scores",
       "code": "tss",
       "type": "counter"
     },
-    {
-      "name": "Amplified Speaker Scores",
-      "code": "tass",
+    { "name": "Speaker Scores",
+      "code": "tsa",
       "type": "counter"
     },
     { "name": "Times Amplified",
