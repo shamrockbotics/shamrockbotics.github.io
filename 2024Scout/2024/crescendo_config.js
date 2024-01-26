@@ -8,8 +8,8 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "INCMP", 
-      "required": "false"
+      "defaultValue": "2023incmp", 
+      "required": "true"
     },
     { "name": "Match Level",
       "code": "l",

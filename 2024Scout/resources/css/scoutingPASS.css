@@ -24,7 +24,7 @@ html, body{
     font-style: bold;
     letter-spacing: 1px;
     border-width: 4px;
-    border-color: white;
+    border-color: rgb(0, 255, 38);
 }
 
 .button {
@@ -75,6 +75,7 @@ html, body{
 }
 
 #auton{
+    
 }
 
 #teleop{
