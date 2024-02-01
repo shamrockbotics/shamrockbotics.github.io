@@ -29,6 +29,12 @@ html, body{
     table-layout: fixed;
 }
 
+.credits{
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
 .button {
     font-family: Alexis;
     font-size: 16px;
