@@ -115,12 +115,8 @@ var config_data = `
     }
   ],
   "postmatch": [
-    { "name": "Died/Immobilized",
+    { "name": "Died/Immobilized/TippedOver",
       "code": "die",
-      "type": "bool"
-    },
-    { "name": "Tippy<br>(almost tipped over)",
-      "code": "tip",
       "type": "bool"
     },
     { "name": "Comments",
@@ -132,6 +128,7 @@ var config_data = `
         "b": "Something Broke on the Robot<br>",
         "n": "Dropped Alot of Notes (Over 3)<br>",
         "w": "Played Defense Really Well (Only applies if team did play defense)<br>",
+        "t": "Almost Tipped Over A Few Times (Tippy)<br>",
         "x": "None"
       },
       "defaultValue": "x"
