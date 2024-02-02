@@ -58,7 +58,7 @@ var config_data = `
       "code": "aas",
       "type": "counter"
     },
-    { "name": "Speaker Scores",
+    { "name": "Auto Speaker Scores",
       "code": "ass",
       "type": "counter"
     }
@@ -68,12 +68,22 @@ var config_data = `
       "code": "tas",
       "type": "counter"
     },
-    { "name": "Amplified Speaker Scores",
-      "code": "tss",
+    {
+      "name": "Missed Amp Scores",
+      "code": "mas",
       "type": "counter"
     },
     { "name": "Speaker Scores",
+      "code": "tss",
+      "type": "counter"
+    },
+    { "name": "Amplified Speaker Scores",
       "code": "tsa",
+      "type": "counter"
+    },
+    {
+      "name": "Missed Speaker Scores",
+      "code": "mss",
       "type": "counter"
     },
     { "name": "Times Amplified",
