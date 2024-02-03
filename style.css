@@ -64,6 +64,43 @@
   #check{
     display: none;
   }
+#grid_links {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    gap: 10px 10px;
+    width: calc(30vw + 20px);
+    /* ahh, I love CSS */
+    margin: auto;
+}
+#grid_links a{
+    background-image: url(./test_images/3.jpg);
+    box-shadow: inset 0 0 0 100vmax rgba(36,121,71,.55);
+    background-size: cover;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+#grid_links a:hover {
+    box-shadow: inherit;
+    background-image: none !important;
+}
+#grid_links a:hover p {
+    display: inherit;
+    transition: 0.5s;
+    color: #ffe000;
+}
+#grid_links p{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.8em;
+}
   @media (max-width: 952px){
     label.logo{
       font-size: 30px;
