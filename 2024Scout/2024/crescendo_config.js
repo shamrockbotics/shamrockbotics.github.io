@@ -125,16 +125,13 @@ var config_data = `
     }
   ],
   "postmatch": [
-    { "name": "Died/Immobilized/TippedOver",
-      "code": "die",
-      "type": "bool"
-    },
     { "name": "Comments",
       "code": "co",
       "type": "radio",
       "choices": {
         "l": "Robot Lost Connection<br>",
         "d": "Robot Got Disabled<br>",
+        "i": "Robot Died/Immobilized<br>",
         "b": "Something Broke on the Robot<br>",
         "n": "Dropped Alot of Notes (Over 3)<br>",
         "w": "Played Defense Really Well (Only applies if team did play defense)<br>",
