@@ -915,11 +915,11 @@ function clearForm() {
       document.getElementById("input_m").value = match + 1
     }
 
-    robot = parseInt(document.getElementById("display_r").value)
+    robot = parseInt(document.getElementById("input_r").value)
     if (robot == NaN) {
-      document.getElementById("display_r").value = ""
+      document.getElementById("input_r").value = ""
     } else {
-      document.getElementById("display_r").value = robot
+      document.getElementById("input_r").value = robot
     }
 
     // Robot
