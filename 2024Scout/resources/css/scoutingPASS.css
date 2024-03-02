@@ -27,14 +27,6 @@ html, body{
     border-color: rgb(0, 255, 38);
     padding: 13px;
     table-layout: fixed;
-
-}
-
-.button {
-    border-color: #0aec3b;
-    width: auto;
-    min-width: 16px;
-    max-width: 30px;
 }
 
 .credits{

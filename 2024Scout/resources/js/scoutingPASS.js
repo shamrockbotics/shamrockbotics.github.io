@@ -900,7 +900,6 @@ function qr_clear() {
 function clearForm() {
   var match = 0;
   var e = 0;
-  var robot = "";
 
   if (pitScouting) {
     swipePage(-1);
@@ -913,13 +912,6 @@ function clearForm() {
       document.getElementById("input_m").value = ""
     } else {
       document.getElementById("input_m").value = match + 1
-    }
-
-    robot = parseInt(document.getElementById("input_r").value)
-    if (robot == NaN) {
-      document.getElementById("input_r").value = ""
-    } else {
-      document.getElementById("input_r").value = robot
     }
 
     // Robot
