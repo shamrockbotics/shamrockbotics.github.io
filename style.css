@@ -40,6 +40,8 @@
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
+    line-height: 100%;
+    /* may break something lol */
     text-transform: uppercase;
     text-decoration: none;
   }
