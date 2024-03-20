@@ -8,7 +8,7 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2024incol", 
+      "defaultValue": "2024inpla", 
       "required": "true"
     },
     { "name": "Match Level",
