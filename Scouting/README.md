@@ -52,3 +52,5 @@ Click [Here](docs/Updating.md) to see how to update the software
 <div id="googlesheets"></div>
 
 # Google Sheets
+
+Click [Here](docs/GoogleSheets.md) to see how to update the google sheet
