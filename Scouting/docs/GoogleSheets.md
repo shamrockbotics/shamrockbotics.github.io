@@ -41,7 +41,9 @@ The first step with the google sheets is the DataInfo sheet. This sheet has no f
 
 ![DataInfoScreen](../resources/images/GoogleSheetImages/DataInfoScreen.png)
 
-Each radio from the scouting site should have two columns to itself
+Each radio from the scouting site should have two columns to itself. One column is the letter and the other column is its corresponding option. This is also where you can define your event codes with their corresponding event names. In the case of wanting to view all events, leave event code blank. 
+
+There is a current bug with this system as all the blank letter or event code spaces must be filled for the system to work. 
 
 <div id="teaminfo"></div>
 
