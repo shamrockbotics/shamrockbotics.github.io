@@ -39,7 +39,7 @@ Every year, there is a new frc competition which means the scouting software mus
 
 The first step with the google sheets is the DataInfo sheet. This sheet has no functions, but is used as a key for the rest of the sheets. This is where you define what radio options mean what and what each event code means.
 
-![DataInfoImage](resources/images/DataInfoScreen.png)
+![DataInfoImage](.../resources/images/DataInfoScreen.png)
 
 Each radio from the scouting site should have two columns to itself
 
