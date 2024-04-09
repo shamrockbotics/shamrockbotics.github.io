@@ -1,313 +1,312 @@
 *{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-  }
-  body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  nav{
-    background: #339c5e;
-    height: 80px;
-    line-height: 80px;
-    width: 100%;
-  }
-  label.logo{
-    display: inline-block;
-    line-height: normal;
-    vertical-align: middle;
-    padding: 0px 30px;
-  }
-  .logo a:hover, .logo a:active{
-    background: inherit;
-    color: inherit;
-  }
-  /* big thanks to https://www.w3docs.com/snippets/css/how-to-vertically-align-inline-inline-block-elements.html for this solution */
-  nav ul{
-    float: right;
-    margin-right: 20px;
-  }
-  nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-  }
-  nav ul li a{
-    color: #ffe000;
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    line-height: 100%;
-    /* may break something lol */
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  .join_button {
-    color: #247947;
-    background: #ffe000;
-  }
-  a.active,a:hover{
-    background: #247947;
-    color: #ffe000;
-    transition: .5s;
-  }
-  .checkbtn{
-    font-size: 30px;
-    color: #ffe000;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-  }
-  #check{
-    display: none;
-  }
-#grid_links {
-    display: grid;
-    grid-template-columns: repeat(3, 10vw);
-    grid-template-rows: repeat(3, 10vw);
-    gap: 10px 10px;
-    width: calc(30vw + 20px);
-    /* ahh, I love CSS */
-    margin: auto;
-}
-#grid_links a{
-    background-image: url(./test_images/3.jpg);
-    box-shadow: inset 0 0 0 100vmax rgba(36,121,71,.5);
-    background-size: cover;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-#grid_links a:hover {
-    box-shadow: inherit;
-    background-image: none !important;
-}
-#grid_links a:hover p {
-    display: inherit;
-    transition: 0.5s;
-    color: #ffe000;
-}
-#grid_links p{
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    font-size: 1.8em;
-}
-  @media (max-width: 952px){
-    label.logo{
-      font-size: 30px;
-      padding-left: 50px;
-    }
-    nav ul li a{
-      font-size: 16px;
-    }
-  }
-  @media (max-width: 1350px){
-    .checkbtn{
-      display: block;
-    }
-    ul{
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: #2c3e50;
-      top: 80px;
-      left: -100%;
-      text-align: center;
-      transition: all .5s;
-    }
-    nav ul li{
-      display: block;
-      margin: 50px 0;
-      line-height: 30px;
-    }
-    nav ul li a{
-      font-size: 20px;
-    }
-    a:hover,a.active{
-      background: none;
-      color: #339c5e;
-    }
-    #check:checked ~ ul{
-      left: 0;
-    }
-  }
-  footer {
-    background: #339c5e;
-    height: auto;
-    width: 100w;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding-top: 40px;
-    color: white;
-  }
-  .footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  .footer-content h3 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-transform: capitalize;
-    line-height: 3rem;
-  }
-  .footer-content p {
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-  }
-  .socials {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-  }
-  .socials li {
-    margin: 0 10px;
-  }
-  .socials a {
-    text-decoration: none;
-    color: white;
-  }
-  .socials a i {
-    font-size: 1.1rem;
-    transition: color .4s ease;
-  }
-  .socials a:hover i {
-    color: #ffe000;
-  }
-  .footer-bottom {
-    background: black;
-    width: 100vw;
-    padding: 20px 0;
-    text-align: center;
-  }
-  .footer-bottom p{
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-  }
-  #home-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 20px;
-  width: 50%;
-  }
-  .container {
-    padding: 64px
-  }
-  .container span {
-    color: #339c5e;
-    font-weight: bold;
-  }
-  .row {
-    padding-left: 170px;
-  }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both
-  }
+   padding: 0;
+   margin: 0;
+   text-decoration: none;
+   list-style: none;
+   box-sizing: border-box;
+ }
+ body{
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+ nav{
+   background: #339c5e;
+   height: 80px;
+   line-height: 80px;
+   width: 100%;
+ }
+ label.logo{
+   display: inline-block;
+   line-height: normal;
+   vertical-align: middle;
+   padding: 10px 10px;
+ }
+ .logo a:hover, .logo a:active{
+   background: inherit;
+   color: inherit;
+ }
 
-  .column-66 {
-    float: left;
-    width: 66.66666%;
-    padding: 20px;
-  }
+ /* big thanks to https://www.w3docs.com/snippets/css/how-to-vertically-align-inline-inline-block-elements.html for this solution */
+ nav ul{
+   float: right;
+   margin-right: 20px;
+ }
+ nav ul li{
+   display: inline-block;
+   line-height: 80px;
+   margin: 0 5px;
+ }
+ nav ul li a{
+   color: #ffe000;
+   color: white;
+   font-size: 17px;
+   padding: 7px 13px;
+   border-radius: 3px;
+   line-height: 100%;
+   /* may break something lol */
+   text-transform: uppercase;
+   text-decoration: none;
+ }
+ .join_button {
+   color: #247947;
+   background: #ffe000;
+ }
+ a.active,a:hover{
+   background: #247947;
+   color: #ffe000;
+   transition: .5s;
+ }
+ .checkbtn{
+   font-size: 30px;
+   color: #ffe000;
+   float: right;
+   line-height: 80px;
+   margin-right: 20px;
+   cursor: pointer;
+   display: none;
+ }
+ .container {
+   padding: 64px;
+ }
+ .container span {
+   color: #339c5e;
+   font-weight: bold;
+ }
+ #check{
+   display: none;
+ }
+ #grid_links {
+     display: grid;
+     grid-template-columns: repeat(3, 30vw);
+     grid-template-rows: repeat(3, 30vw);
+     gap: 10px 10px;
+     justify-content: center;
+ }
+ #grid_links a{
+     background-image: url(./test_images/3.jpg);
+     box-shadow: inset 0 0 0 100vmax rgba(36,121,71,.5);
+     background-size: cover;
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0;
+     padding: 0;
+ }
+ #grid_links a:hover {
+     box-shadow: inherit;
+     background-image: none !important;
+ }
+ #grid_links a:hover p {
+     display: inherit;
+     transition: 0.5s;
+     color: #ffe000;
+ }
+ #grid_links p{
+     color: white;
+     text-decoration: none;
+     text-transform: uppercase;
+     font-weight: bold;
+     text-align: center;
+     font-size: min(3.8vw, 4vh);
+ }
 
-  .column-33 {
-    float: left;
-    width: 33.33333%;
-    padding: 20px;
-  }
+ @media (max-width: 1530px){
+   label.logo{
+     font-size: 30px;
+     width: 80%
+   }
+   .checkbtn{
+     display: block;
+   }
+   ul{
+     position: fixed;
+     width: 100%;
+     height: 100vh;
+     background: #2c3e50;
+     top: 80px;
+     left: -100%;
+     text-align: center;
+     transition: all .5s;
+   }
+   nav ul li{
+     display: block;
+     margin: 50px 0;
+     line-height: 30px;
+   }
+   nav ul li a{
+     font-size: 20px;
+   }
+   a:hover,a.active{
+     background: none;
+     color: #339c5e;
+   }
+   #check:checked ~ ul{
+     left: 0;
+   }
+   .container {
+     width: 100%;
+     padding: 64px 10px;
+   }
+ }
+ footer {
+   background: #339c5e;
+   height: auto;
+   width: 100w;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   padding-top: 40px;
+   color: white;
+ }
+ .footer-content {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+ }
+ .footer-content h3 {
+   font-size: 1.8rem;
+   font-weight: 400;
+   text-transform: capitalize;
+   line-height: 3rem;
+ }
+ .footer-content p {
+   max-width: 500px;
+   margin: 10px auto;
+   line-height: 28px;
+   font-size: 14px;
+ }
+ .socials {
+   list-style: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 1rem 0 3rem 0;
+ }
+ .socials li {
+   margin: 0 10px;
+ }
+ .socials a {
+   text-decoration: none;
+   color: white;
+ }
+ .socials a i {
+   font-size: 1.1rem;
+   transition: color .4s ease;
+ }
+ .socials a:hover i {
+   color: #ffe000;
+ }
+ .footer-bottom {
+   background: black;
+   width: 100vw;
+   padding: 20px 0;
+   text-align: center;
+ }
+ .footer-bottom p{
+   font-size: 14px;
+   word-spacing: 2px;
+   text-transform: capitalize;
+ }
+ #home-image {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 20px;
+   width: 50%;
+ }
+ .row {
+   padding-left: 170px;
+ }
+ .row:after {
+   content: "";
+   display: table;
+   clear: both
+ }
 
-  .large-font {
-    font-size: 48px;
-  }
+ .column-66 {
+   float: left;
+   width: 66.66666%;
+   padding: 20px;
+ }
 
-  .xlarge-font {
-    font-size: 64px
-  }
+ .column-33 {
+   float: left;
+   width: 33.33333%;
+   padding: 20px;
+ }
 
-  .button {
-    border: none;
-    color: white;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4CAF50;
-  }
+ .large-font {
+   font-size: 48px;
+ }
 
-  img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-  }
+ .xlarge-font {
+   font-size: 64px
+ }
 
-  @media screen and (max-width: 1000px) {
-    .column-66,
-    .column-33 {
-      width: 100%;
-      text-align: center;
-    }
-    img {
-      margin: auto;
-    }
-  }
-  a, a:hover, a:focus, a:active {
-    text-decoration: none;
+ .button {
+   border: none;
+   color: white;
+   padding: 14px 28px;
+   font-size: 16px;
+   cursor: pointer;
+   background-color: #4CAF50;
+ }
+
+ img {
+   display: block;
+   height: auto;
+   max-width: 100%;
+ }
+
+ @media screen and (max-width: 1000px) {
+   .column-66,
+   .column-33 {
+     width: 100%;
+     text-align: center;
+   }
+   img {
+     margin: auto;
+   }
+ }
+ a, a:hover, a:focus, a:active {
+   text-decoration: none;
  }
  a{
-   color: #339c5e;
-   text-decoration: underline;
-}
- .fll-content {
-  padding-top: 0px;
-  margin-left: 300px;
-  margin-right: 300px;
-}
-.fll-content h1 {
-  font-size: 50px;
-  font-weight: 500;
-}
-.fll-content h3 {
-  padding-bottom: 10px;
-  text-align: center;
-  font-size: 30px;
-  font-weight: 500;
-}
-.fll-content p {
-  padding-bottom: 15px
-}
-/* these need to be deleted */
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-}
-.resource-format {
-  font-size: 20px;
-}
-.resource-format h4 {
-  text-align: center;
-  font-size: 40px;
-}
-.calender-format {
-  text-align: center;
-}
+    color: #339c5e;
+    text-decoration: underline;
+ }
+  .fll-content {
+   padding-top: 0px;
+   margin-left: 300px;
+   margin-right: 300px;
+ }
+ .fll-content h1 {
+   font-size: 50px;
+   font-weight: 500;
+ }
+ .fll-content h3 {
+   padding-bottom: 10px;
+   text-align: center;
+   font-size: 30px;
+   font-weight: 500;
+ }
+ .fll-content p {
+   padding-bottom: 15px
+ }
+ /* these need to be deleted */
+ .center {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 70%;
+ }
+ .resource-format {
+   font-size: 20px;
+ }
+ .resource-format h4 {
+   text-align: center;
+   font-size: 40px;
+ }
+ .calender-format {
+   text-align: center;
+ }
