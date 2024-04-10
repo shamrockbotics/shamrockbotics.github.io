@@ -74,6 +74,12 @@ The fourth column tracks all the teams currently found in the match data. This i
 
 # Analyzing Robot Data
 
+The Robot sheet is one of the most complex sheets. It is used to view a robots match data throughout one or more competitions
+
+![RobotFullScreen](../resources/images/GoogleSheetImages/RobotFullScreen.png)
+
+The Robot sheet can be split into two main parts, the actual match data and the robot statistics.
+
 <div id="compare"></div>
 
 # Comparing Robots
