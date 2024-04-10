@@ -39,7 +39,7 @@ Every year, there is a new frc competition which means the scouting software mus
 
 The Master sheet is where all the data is entered. It stores everything and it is where everything is referenced. It is important to set this sheet up correctly in order to set up any other sheet.
 
-![MasterSheetScreen](../resources/images/GoogleSheetImages/)
+![MasterSheetScreen](../resources/images/GoogleSheetImages/MasterSheetScreen.png)
 
 The first step when setting up this sheet is getting the columns named correctly. Each column needs the correct name that corresponds to the data inputted. To do this, the config file should be updated for this year so that the scouting website works as intended. More about that can be found [here](Updating.md). Once this is done, using the website or the config file, name the columns going down in order of what entry is listed first. For example, the first entry field is the event so the first column should be labeled event, the next is match type and so on all the way until every column is labeled. To know this is correct, use the scouting website, enter fake data and when you paste the data in, the end columns should align.
 
