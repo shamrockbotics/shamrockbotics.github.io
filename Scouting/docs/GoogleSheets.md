@@ -104,6 +104,8 @@ One feature used throught this sheet and others is the conditional formatting of
 
 There are a couple of extra features on the match data section like counting the number of matches which is the funtion (```=IF(D16=0,,COUNT(D16) + C15 )```) that keeps track of how many matches were played by checking if a space is empty, if it's not count one and add it to the previous number of matches.
 
+A useful feature with the Robot sheet is hiding certian cells if the scouter feels they are not needed. Simply click on the entire column at the top, right click, and select hide column.
+
 ![MatchStatisticsSection](../resources/images/GoogleSheetImages/MatchStatisticsSection.png)
 
 The third and final part of the Robot sheet is the match statistics section. This section can be used to view certian robot statistics and provide predictions as to what future scores may look like. 
@@ -118,6 +120,15 @@ Utilizing google sheet's graphs is a useful way to visualize match data in an ea
 <div id="compare"></div>
 
 # Comparing Robots
+
+The Compare sheet is used to compare robots based from their different match data and from what event is selected. This sheet is also used as a way for scouters to determine a pick list for alliance selections. Not every column needs to be shown. Depending on the teams criteria for picking alliance partners, the scouters can hide columns in order to view only specific columns of data.
+
+![CompareScreen](../resources/images/GoogleSheetImages/CompareScreen.png)
+
+The dropdown for selecting the event is the same the one used in the Robot sheet, with the corresponding event code placeholder cell being A3.
+
+The other dropdown being used as a marker for whether a team is picked, not picked, or other options is simply a created dropdown with those options and does not include any funtions.
+
 
 
 
