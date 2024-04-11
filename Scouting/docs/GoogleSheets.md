@@ -78,7 +78,42 @@ The Robot sheet is one of the most complex sheets. It is used to view a robots m
 
 ![RobotFullScreen](../resources/images/GoogleSheetImages/RobotFullScreen.png)
 
-The Robot sheet can be split into two main parts, the actual match data and the robot statistics.
+The Robot sheet can be split into 3 main parts, the actual match data, the robot statistics, and the search bar. A key component of this sheet is not the functions, but the organization, lines, colors, and text sizes to make every element easily readable where anyone can quickly find the information their looking for.
+
+![SearchBarRobot](../resources/images/GoogleSheetImages/SearchBarRobot.png)
+
+The first part is the search bar. This is located at the top of the sheet and allows the user to select what robot to view as well as what event to pull the statistics from. 
+
+The formula for the dropdowns are '''=Teams!$D$2:$D''' and '''=DataInfo!$H$1:$H'''. These formulas create the dropdown options from the data that is pulled from the referenced sheet. The simple format is SheetName!Range where the sheet name has no spaces. The $ symbol means that no matter where the dropdown is if it were ever moved or pasted, the column and row letter and numbers stay the same. This is useful if your wanting to paste formulas without ranges changing
+
+Another part of the search bar is the team name feature. This is a small QUERY that looks for the team name from the Teams sheet based off of the team number. (```=query(Teams!A2:C, "select B where A = "&D1&" order by B")```)
+
+![MatchDataSection](../resources/images/GoogleSheetImages/MatchDataSection.png)
+
+The second part is the match data portion. The basic idea of this section is one QUERY funtion that gathers all of the match data based off of the robot and event fields of the search bar
+
+'''=IFERROR(IF(len(D1)=0,"Please choose a value in D1",query(Master!A2:S,"select C, F, G, H, I, J, K, L, M, N, O where (E = "&D1&" "&if(B2=0,," AND A = '"&B2&"'")&")  order by E, A desc")))```
+
+The QUERY searches through the entire Master sheet and selects certian columns of data to be displayed. This data also meets the criteria where the team number is the same as the one selected in the search bar. For this sheet, the cell B2 is a placeholder cell that gets the event code based off of the selected event. If that space has an event code, then the QUERY also matches the event codes while searching through the data. The cell B2 uses a simple FILTER (```=FILTER(DataInfo!$G$1:$G, DataInfo!$H$1:$H=$H$1)```) to pull the corresponding event code based off of the selected event. The last part is where it orders the data.
+
+If you decide you want the meanings behind what the radio options mean within the match data, the first step is to break apart the QUERY. Add a column to the right of the data of the specific radio and split the QUERY columns in a way were all the columns after the radio option are in their own QUERY search, change the select portion of the QUERY to edit what columns you want on what side.
+
+Once there is a blank column in the middle of the two queries, use a simple FILTER (```=IFERROR(IF(len($D$1)=0,,FILTER(DataInfo!$F$1:$F, DataInfo!$E$1:$E=$N16)))```) function to grab the corresponding meaning of the selected radio data where you defined what radio option meant what in the DataInfo sheet.
+
+One feature used throught this sheet and others is the conditional formatting of google sheets. This is used to change the background color of certian cells based off of the values. It can be useful for quickly identifies good and not so good data without needing to read all the small numbers of data.
+
+There are a couple of extra features on the match data section like counting the number of matches which is the funtion (```=IF(D16=0,,COUNT(D16) + C15 )```) that keeps track of how many matches were played by checking if a space is empty, if it's not count one and add it to the previous number of matches.
+
+![MatchStatisticsSection](../resources/images/GoogleSheetImages/MatchStatisticsSection.png)
+
+The third and final part of the Robot sheet is the match statistics section. This section can be used to view certian robot statistics and provide predictions as to what future scores may look like. 
+
+The funtions used for this section are the basic funtions of sheets like MIN, MAX, AVERAGE, MEDIAN. The tedious part is manually adding all the ranges for every match or score that you want to track. 
+
+The TREND, FORCAST, and FORECAST.LINEAR funtions provide three different predictions on what the next match's score might look like for that robot. 
+
+Utilizing google sheet's graphs is a useful way to visualize match data in an easy to read fashion. The example above tracks speaker and amp scores from the 2024 FRC Crecendo game. The graphs display the different amounts of scoring for each match with a more opaque trendline to view the change in the scores.
+
 
 <div id="compare"></div>
 
