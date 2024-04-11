@@ -92,7 +92,7 @@ Another part of the search bar is the team name feature. This is a small QUERY t
 
 The second part is the match data portion. The basic idea of this section is one QUERY funtion that gathers all of the match data based off of the robot and event fields of the search bar
 
-'''=IFERROR(IF(len(D1)=0,"Please choose a value in D1",query(Master!A2:S,"select C, F, G, H, I, J, K, L, M, N, O where (E = "&D1&" "&if(B2=0,," AND A = '"&B2&"'")&")  order by E, A desc")))```
+```=IFERROR(IF(len(D1)=0,"Please choose a value in D1",query(Master!A2:S,"select C, F, G, H, I, J, K, L, M, N, O where (E = "&D1&" "&if(B2=0,," AND A = '"&B2&"'")&")  order by E, A desc")))```
 
 The QUERY searches through the entire Master sheet and selects certian columns of data to be displayed. This data also meets the criteria where the team number is the same as the one selected in the search bar. For this sheet, the cell B2 is a placeholder cell that gets the event code based off of the selected event. If that space has an event code, then the QUERY also matches the event codes while searching through the data. The cell B2 uses a simple FILTER (```=FILTER(DataInfo!$G$1:$G, DataInfo!$H$1:$H=$H$1)```) to pull the corresponding event code based off of the selected event. The last part is where it orders the data.
 
