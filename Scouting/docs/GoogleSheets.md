@@ -14,6 +14,7 @@
     <li><a href="#teaminfo">Team Info</a></li>
     <li><a href="#robot">Robot Data</a></li>
     <li><a href="#compare">Comparing Data</a></li>
+    <li><a href="#tips>">Helpful Tips</a></li>
   </ol>
 </details>
 
@@ -129,7 +130,44 @@ The dropdown for selecting the event is the same the one used in the Robot sheet
 
 The other dropdown being used as a marker for whether a team is picked, not picked, or other options is simply a created dropdown with those options and does not include any funtions.
 
+The main function used on the compare sheet is a QUERY ```=IFERROR(query(Master!A2:S,"select E, avg(G), avg(H), avg(F) "&if(A3=0,"where E>0"," where A = '"&A3&"'")&" group by E, 1"))```. This function is used to get all the team numbers and calculate all the averages for the different columns. It functions in a similar way to the Robot sheet where you select the team numbers or E then any other column you want to average you use the avg() feature of the QUERY. If the scout wants to add a percent column in the middle of the averages, like the match data in the Robot sheet, you split the QUERY into two different parts. 
 
+For example if there is the QUERY ```=IFERROR(query(Master!A2:S,"select E, avg(G), avg(H), avg(F), avg(I), avg(k) "&if(A3=0,"where E>0"," where A = '"&A3&"'")&" group by E, 1"))``` and I wanted to add a calculated percent column  in between the selected columns F and I, then I could split the query into two parts, ```=IFERROR(query(Master!A2:S,"select E, avg(G), avg(H), avg(F)"&if(A3=0,"where E>0"," where A = '"&A3&"'")&" group by E, 1"))``` and ```=IFERROR(query(Master!A2:S,"select avg(I), avg(k) "&if(A3=0,"where E>0"," where A = '"&A3&"'")&" group by E, 1"))``` with one called in the section before and one the later.
 
+When calculating a percentage in a percent column, there are two ways to do this. One is do use empty columns on the sheet, search for the data using a QUERY and calculate the data in another cell then transfer it over. 
+
+The other method is to search and calculate the percent in the same cell. This is a little more complex but saves space. 
+
+```=IF($C4<>"",(COUNTIF(QUERY(Master!A2:S, "select P where E="&$C4&" "&if($A$3=0,," and A = '"&$A$3&"'")&" "),"o")/(COUNTA(ARRAYFORMULA(QUERY(Master!A2:S, "select P where E="&$C4&" "&if($A$3=0,," and A = '"&$A$3&"'")&" "))))),"")```
+
+This funtion could seem a little complex at first, but once it is broken into its components, its easier to understand. The first part is the if statement (```=IF($C4<>"", (calculated percent), "")```). Using the not operator ```<>``` the function checks if the row's team number is blank, if the cell has a team number then this returns the percent, otherwise the cell stays blank.
+
+The next part is getting the amounts. This example is calculating the percentage onstage. Since the endgame data is returned in the form of a radio, COUNTIF is used. The top QUERY selects every instance of the onstage data using the team number and competition as criteria. The bottom QUERY selects every single endgame data result using the same criteria. The number of onstages/total endgame places is calculated and made into a percent
+
+If one wanted to calculate the percent of an amount of scores, the SUM funtion should work in replace of the COUNTIF or COUNTA funtions. 
+
+The Compare sheet is uses conditional formatting to allow scouters to easily view data by colors instead of numbers. Each column utilizes a conditional format where a color scale is applied between the min and max values of the column. 
+
+If a scouter wishes to not view certian columns of data, they can click on the entire column and hide it. 
+
+Each team name is displayed next to the team number to help scouters know which team is which. The function for this is similar to the one used in the Robot sheet ```=IFERROR(query(Teams!A2:B, "select B where A = "&$C4&" order by B"))```
+
+<div id="description"></div>
+
+# Helpful Tips
+
+Some helpful tips for creating these sheets may include the following:
+
+* When wanting to apply a formula or value to the entire column, click the cell with the formula and drag the little blue dot in the bottom right corner all the way down the column.
+
+* When pasting functions from column to column, the ```$``` allows for ranges to be fixed to a specific range when copying and pasting the funtion. This will need placed in front of both the letter and number. For example: the range ```$A$16``` will not change no matter the placement.
+
+* It is helpful to have a test sheet to experiment with funtions to ensure they work before adding them to their proper place. This could make it easier to find bugs or problems within the sheet
+
+* Freezing rows or columns allows for the important names or headers to be seen at all times event when scrolling down
+
+* Hiding rows or columns allows for hiding placeholder values or functions to be hidden from view when using the sheets. It also allows for data to be hidden if the user only wants to view certian pieces of data
+
+* Adding line weight to certian lines helps create borders and sections where it is easily understood which section is which
 
 <p align="right">(<a href="#top">back to top</a>)</p>
