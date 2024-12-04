@@ -175,6 +175,15 @@
    line-height: 28px;
    font-size: 14px;
  }
+ .main-image {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+ .main-image img {
+   max-width: 400px;
+ }
  .socials {
    list-style: none;
    display: flex;
