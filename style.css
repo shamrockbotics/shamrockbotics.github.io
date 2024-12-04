@@ -82,7 +82,7 @@
      justify-content: center;
  }
  #grid_links a{
-     background-image: url(./test_images/3.jpg);
+     background-image: url(./images/3.jpg);
      box-shadow: inset 0 0 0 100vmax rgba(36,121,71,.5);
      background-size: cover;
      text-decoration: none;
