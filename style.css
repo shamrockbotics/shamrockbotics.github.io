@@ -182,7 +182,7 @@
    text-align: center;
  }
  .main-image img {
-   max-width: 400px;
+   max-height: 800px;
  }
  .socials {
    list-style: none;
