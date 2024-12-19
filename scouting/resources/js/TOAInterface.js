@@ -10,7 +10,7 @@ var authKey = "T5BIrNMrmhp22ylI1QmXsbz0G5lyv3tR9gN9oLaNCE4=";
 function getTeams(eventCode) {
 	if (authKey) {
 		var xmlhttp = new XMLHttpRequest();
-		var url = "https://www.theorangealliance.org/api/event/" + eventCode + "/teams";
+		var url = "https://theorangealliance.org/api/event/" + eventCode + "/teams";
 		xmlhttp.open("GET", url, true);
 		xmlhttp.setRequestHeader("X-TOA-Key", authKey);
 		xmlhttp.onreadystatechange = function() {
@@ -32,7 +32,7 @@ function getTeams(eventCode) {
 function getSchedule(eventCode) {
 	if (authKey) {
 		var xmlhttp = new XMLHttpRequest();
-		var url = "https://www.theorangealliance.org/api/event/" + eventCode + "/matches";
+		var url = "https://theorangealliance.org/api/event/" + eventCode + "/matches";
 		xmlhttp.open("GET", url, true);
 		xmlhttp.setRequestHeader("X-TOA-Key", authKey);
 		xmlhttp.onreadystatechange = function() {
