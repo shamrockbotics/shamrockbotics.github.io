@@ -9,7 +9,7 @@ var config_data = `
             "name": "Event",
             "code": "e",
             "type": "event",
-            "defaultValue": "2425-IN-WLQ2",
+            "defaultValue": "2425-IN-INQ",
             "required": "true"
         },
         {
