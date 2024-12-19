@@ -2,6 +2,7 @@
 var teams = null;
 var schedule = null;
 var authKey = "T5BIrNMrmhp22ylI1QmXsbz0G5lyv3tR9gN9oLaNCE4=";
+var appID = "SRB Scouting";
 /**
  * Get list of teams in event
  *
@@ -12,6 +13,7 @@ function getTeams(eventCode) {
 		var xmlhttp = new XMLHttpRequest();
 		var url = "https://theorangealliance.org/api/event/" + eventCode + "/teams";
 		xmlhttp.open("GET", url, true);
+		xmlhttp.setRequestHeader("X-Application-Origin", appID);
 		xmlhttp.setRequestHeader("X-TOA-Key", authKey);
 		xmlhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
@@ -34,6 +36,7 @@ function getSchedule(eventCode) {
 		var xmlhttp = new XMLHttpRequest();
 		var url = "https://theorangealliance.org/api/event/" + eventCode + "/matches";
 		xmlhttp.open("GET", url, true);
+		xmlhttp.setRequestHeader("X-Application-Origin", appID);
 		xmlhttp.setRequestHeader("X-TOA-Key", authKey);
 		xmlhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
