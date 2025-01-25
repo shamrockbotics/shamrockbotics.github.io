@@ -25,6 +25,8 @@ var options = {
 //var requiredFields = ["e", "m", "l", "t", "r", "s", "as"];
 var requiredFields = ["m", "l", "r", "t"];
 
+var isFTC = false;
+
 function addTimer(table, idx, name, data) {
   var row = table.insertRow(idx);
   var cell1 = row.insertCell(0);
@@ -716,6 +718,13 @@ function configure() {
     }
   }
 
+  if (mydata.hasOwnProperty('event_type'))
+  {
+    if (mydata.event_type.toUpperCase() == 'FTC') {
+      isFTC = true;
+    }
+  }
+
   // Configure prematch screen
   var pmc = mydata.prematch;
   var pmt = document.getElementById("prematch_table");
@@ -1169,10 +1178,17 @@ function getIdBase(name) {
 function getTeamName(teamNumber) {
   if (teamNumber !== undefined) {
     if (teams) {
-      var teamKey = "frc" + teamNumber;
-      var ret = "";
-      Array.from(teams).forEach(team => ret = team.key == teamKey ? team.nickname : ret);
-      return ret;
+      if(isFTC) {
+        var teamKey = teamNumber;
+        var ret = "";
+        Array.from(teams).forEach(team => ret = team.team_key == teamKey ? team.team.team_name_short : ret);
+        return ret;
+      } else {
+        var teamKey = "frc" + teamNumber;
+        var ret = "";
+        Array.from(teams).forEach(team => ret = team.key == teamKey ? team.nickname : ret);
+        return ret;
+      }
     }
   }
   return "";
@@ -1183,7 +1199,11 @@ function getMatch(matchKey) {
   if (matchKey !== undefined) {
     if (schedule) {
       var ret = "";
-      Array.from(schedule).forEach(match => ret = match.key == matchKey ? match.alliances : ret);
+      if(isFTC) {
+        Array.from(schedule).forEach(match => ret = match.match_key == matchKey ? match.participants : ret);
+      } else {
+        Array.from(schedule).forEach(match => ret = match.key == matchKey ? match.alliances : ret);
+      }
       return ret;
     }
   }
@@ -1191,17 +1211,43 @@ function getMatch(matchKey) {
 }
 
 function getCurrentTeamNumberFromRobot() {
-  if (getRobot() != "" && typeof getRobot() !== 'undefined' && getCurrentMatch() != "") {
-    if (getRobot().charAt(0) == "r") {
-      return getCurrentMatch().red.team_keys[parseInt(getRobot().charAt(1)) - 1]
-    } else if (getRobot().charAt(0) == "b") {
-      return getCurrentMatch().blue.team_keys[parseInt(getRobot().charAt(1)) - 1]
+  teamNumber = "";
+  if (getRobot() != "" && typeof getRobot() != 'undefined' && getCurrentMatch() != "") {
+    if (isFTC) {
+      stationID = parseInt(getRobot().charAt(1));
+      if (getRobot().charAt(0) == "r") {
+        stationID += 10;
+      } else if (getRobot().charAt(0) == "b") {
+        stationID += 20;
+      }
+      getCurrentMatch().forEach(participant => {
+        console.log(participant);
+        if(participant.station == stationID) {
+          console.log(participant.team_key);
+          teamNumber = participant.team_key;
+        }
+      });
+    } else {
+      if (getRobot().charAt(0) == "r") {
+        teamNumber = getCurrentMatch().red.team_keys[parseInt(getRobot().charAt(1)) - 1].replace("frc", "")
+      } else if (getRobot().charAt(0) == "b") {
+        teamNumber = getCurrentMatch().blue.team_keys[parseInt(getRobot().charAt(1)) - 1].replace("frc", "")
+      }
     }
   }
+  return teamNumber;
 }
 
 function getCurrentMatchKey() {
-  return document.getElementById("input_e").value + "_" + getLevel() + document.getElementById("input_m").value;
+  if (isFTC) {
+    if (getLevel() == "E") {
+      return document.getElementById("input_e").value + "-" + getLevel() + (document.getElementById("input_m").value * 100 + 1) + "-1";
+    } else {
+      return document.getElementById("input_e").value + "-" + getLevel() + document.getElementById("input_m").value.padStart(3, '0') + "-1";
+    }
+  } else {
+    return document.getElementById("input_e").value + "_" + getLevel() + document.getElementById("input_m").value;
+  }
 }
 
 function getCurrentMatch() {
@@ -1215,12 +1261,12 @@ function updateMatchStart(event) {
     return;
   }
   if (event.target.id.startsWith("input_r")) {
-    document.getElementById("input_t").value = getCurrentTeamNumberFromRobot().replace("frc", "");
+    document.getElementById("input_t").value = getCurrentTeamNumberFromRobot();
     onTeamnameChange();
   }
   if (event.target.id == "input_m") {
     if (getRobot() != "" && typeof getRobot()) {
-      document.getElementById("input_t").value = getCurrentTeamNumberFromRobot().replace("frc", "");
+      document.getElementById("input_t").value = getCurrentTeamNumberFromRobot();
       onTeamnameChange();
     }
   }
@@ -1391,8 +1437,13 @@ window.onload = function () {
       ec = ece.value;
     }
     if (ec != null) {
-      getTeams(ec);
-      getSchedule(ec);
+      if (isFTC) {
+        getTeamsFTC(ec);
+        getScheduleFTC(ec);
+      } else {
+        getTeams(ec);
+        getSchedule(ec);
+      }
     }
     this.drawFields();
     if (enableGoogleSheets) {

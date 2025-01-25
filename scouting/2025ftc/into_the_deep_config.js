@@ -3,6 +3,7 @@ var config_data = `
     "dataFormat": "tsv",
     "title": "Scouting PASS 2025-FTC",
     "page_title": "Into the Deep",
+    "event_type" : "ftc",
     "checkboxAs": "10",
     "prematch": [
         {
@@ -17,11 +18,10 @@ var config_data = `
             "code": "l",
             "type": "level",
             "choices": {
-                "qm": "Quals<br>",
-                "sf": "Semifinals<br>",
-                "f": "Finals"
+                "Q": "Quals<br>",
+                "E": "Elims"
             },
-            "defaultValue": "qm",
+            "defaultValue": "Q",
             "required": "true"
         },
         {
