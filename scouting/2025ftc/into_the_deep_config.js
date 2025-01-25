@@ -123,9 +123,9 @@ var config_data = `
             "type": "radio",
             "choices": {
                 "p": "Parked in Onservation Zone<br>",
-                "ac1": "Ascent Level 1<br>",
-                "ac2": "Ascent Level 2<br>",
-                "ac3": "Ascent Level 3<br>",
+                "f": "Ascent Level 1<br>",
+                "s": "Ascent Level 2<br>",
+                "h": "Ascent Level 3<br>",
                 "x": "None of the above"
             },
             "defaultValue": "x"
