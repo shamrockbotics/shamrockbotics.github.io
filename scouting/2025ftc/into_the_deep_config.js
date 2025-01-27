@@ -10,7 +10,7 @@ var config_data = `
             "name": "Event",
             "code": "e",
             "type": "event",
-            "defaultValue": "2425-IN-WLQ2",
+            "defaultValue": "2425-IN-GRQ",
             "required": "true"
         },
         {
@@ -144,6 +144,7 @@ var config_data = `
                 "n": "Dropped Alot of Samples/Specimens (Over 3)<br>",
                 "w": "Played Defense Really Well (Only applies if team did play defense)<br>",
                 "t": "Almost Tipped Over A Few Times (Tippy)<br>",
+                "u": "Pushed Samples Really Well<br>",
                 "x": "None"
             },
             "defaultValue": "x"
