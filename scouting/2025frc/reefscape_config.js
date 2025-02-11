@@ -130,6 +130,7 @@ var config_data = `
         "x": "Not attempted"
       },
       "defaultValue": "x"
+    }
   ],
   "postmatch": [
     { "name": "Comments",
