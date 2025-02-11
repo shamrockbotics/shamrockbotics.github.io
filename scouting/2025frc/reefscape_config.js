@@ -80,30 +80,30 @@ var config_data = `
     }
   ],
   "teleop": [
-    { "name": "Amp Scores",
-      "code": "tas",
+    { "name": "L1 Coral Scores",
+      "code": "tcbs",
       "type": "counter"
     },
     {
-      "name": "Missed Amp Scores",
-      "code": "mas",
+      "name": "L2 Coral Scores",
+      "code": "css",
       "type": "counter"
     },
-    { "name": "Speaker Scores",
-      "code": "tss",
+    { "name": "L3 Coral Scores",
+      "code": "cts",
       "type": "counter"
     },
-    { "name": "Amplified Speaker Scores",
-      "code": "tsa",
+    { "name": "L4 Coral Scores",
+      "code": "cfs",
       "type": "counter"
     },
     {
-      "name": "Missed Speaker Scores",
-      "code": "mss",
+      "name": "Processor Scores",
+      "code": "ps",
       "type": "counter"
     },
-    { "name": "Times Amplified",
-      "code": "tta",
+    { "name": "Net Scores",
+      "code": "ns",
       "type": "counter"
     },
     { "name": "Pickup From",
@@ -124,21 +124,12 @@ var config_data = `
       "type":"radio",
       "choices": {
         "p": "Parked<br>",
-        "o": "Onstage<br>",
+        "s": "Shallow Cage<br>",
+        "e": "Deep Cage<br>",
         "a": "Attempted but failed<br>",
         "x": "Not attempted"
       },
       "defaultValue": "x"
-    },
-    { "name": "Note in Trap",
-      "code": "nit",
-      "type": "bool"
-    },
-    {
-      "name": "Scored Spotlight (Threw Note and Scored onto pole)",
-      "code": "lit",
-      "type": "bool"
-    }
   ],
   "postmatch": [
     { "name": "Comments",
@@ -149,7 +140,8 @@ var config_data = `
         "d": "Robot Got Disabled<br>",
         "i": "Robot Died/Immobilized<br>",
         "b": "Something Broke on the Robot<br>",
-        "n": "Dropped Alot of Notes (Over 3)<br>",
+        "c": "Dropped A lot of Coral (Over 3)<br>",
+        "g": "Dropped A lot of Algae (Over 3)<br>",
         "w": "Played Defense Really Well (Only applies if team did play defense)<br>",
         "t": "Almost Tipped Over A Few Times (Tippy)<br>",
         "x": "None"
