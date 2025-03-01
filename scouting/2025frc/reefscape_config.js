@@ -150,4 +150,4 @@ var config_data = `
       "defaultValue": "x"
     }
   ]
-}' 
+}`;
