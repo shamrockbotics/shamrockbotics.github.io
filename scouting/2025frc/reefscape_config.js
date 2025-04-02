@@ -8,7 +8,7 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2024inlaf", 
+      "defaultValue": "2024incmp", 
       "required": "true"
     },
     { "name": "Match Level",
