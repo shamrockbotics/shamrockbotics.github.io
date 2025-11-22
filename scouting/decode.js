@@ -53,39 +53,59 @@ var config_data = {
             "max": 99999
         }
   "auton": [
-    { "name": "Moved off Launch Line",     
-     "code": "aml", 
-     "type": "bool" },
-    
-    { "name": "Artifacts Classified",       
-     "code": "aac",  
-     "type": "counter" },
-    
-    { "name": "Artifacts Overflowed", 
+     { 
+       "name": "Moved off Launch Line",     
+       "code": "aml", 
+       "type": "bool" 
+     },
+     { 
+      "name": "Artifacts Classified",       
+      "code": "aac",  
+      "type": "counter"
+    },
+    { 
+      "name": "Artifacts Overflowed", 
      "code": "aao",  
-     "type": "counter" },
-    
-    { "name": "Ramp Pattern Complete",      
+     "type": "counter" 
+    },
+    { 
+      "name": "Ramp Pattern Complete",      
      "code": "arp",  
-     "type": "bool" },
-    
-    { "name": "Park in Base at End of Auto", 
+     "type": "bool" 
+    },
+    { 
+      "name": "Park in Base at End of Auto", 
      "code": "apb", 
-     "type": "bool" }
+     "type": "bool" 
+    }
   ],
-
   "teleop": [
-    { "name": "Artifacts Classified",  "code": "tac",  "type": "counter" },
-    { "name": "Artifacts Overflowed",  "code": "tao",  "type": "counter" },
-    { "name": "Ramp Pattern Complete", "code": "trp",  "type": "bool" }
+      { 
+         "name": "Artifacts Classified",  
+         "code": "tac",  
+         "type": "counter" 
+      },
+      { 
+      "name": "Artifacts Overflowed",  
+      "code": "tao",  
+      "type": "counter" 
+      },
+      { 
+      "name": "Ramp Pattern Complete", 
+        "code": "trp",  
+        "type": "bool" 
+      }
   ],
-
   "endgame": [
-    { "name": "Robot in Base",         "code": "erb", "type": "bool" }
+    { "name": "Robot in Base",         
+      "code": "erb", 
+     "type": "bool" 
+    }
   ],
-
   "postmatch": [
-    { "name": "Comments", "code": "co", "type": "radio",
+    { "name": "Comments", 
+     "code": "co", 
+     "type": "radio",
       "choices": {
         "l": "Lost Connection",
         "d": "Disabled by Ref",
