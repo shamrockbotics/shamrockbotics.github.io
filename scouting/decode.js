@@ -11,7 +11,7 @@ var config_data = {
             "name": "Event",
             "code": "e",
             "type": "event",
-            "defaultValue": "2425-IN-CMP",
+            "defaultValue": "2526-IN-CMP",
             "required": "true"
         },
         {
