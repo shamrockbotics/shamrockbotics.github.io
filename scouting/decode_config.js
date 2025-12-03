@@ -1,17 +1,16 @@
-var config_data = {
-  "dataFormat": "tsv",
-  "title": "Scouting PASS 2025-26 FTC",
-  "page_title": "DECODE",
-  "event_type": "ftc",
-  "checkboxAs": "10",
-
-  "prematch": [
-      "prematch": [
+var config_data = `
+{
+    "dataFormat": "tsv",
+    "title": "Scouting PASS 2025-26 FTC",
+    "page_title": "DECODE",
+    "event_type": "ftc",
+    "checkboxAs": "10",
+    "prematch": [
         {
             "name": "Event",
             "code": "e",
             "type": "event",
-            "defaultValue": "2526-IN-CMP",
+            "defaultValue": "2526-IN-WEQ",
             "required": "true"
         },
         {
@@ -52,68 +51,71 @@ var config_data = {
             "min": 1,
             "max": 99999
         }
-  "auton": [
-     { 
-       "name": "Moved off Launch Line",     
-       "code": "aml", 
-       "type": "bool" 
-     },
-     { 
-      "name": "Artifacts Classified",       
-      "code": "aac",  
-      "type": "counter"
-    },
-    { 
-      "name": "Artifacts Overflowed", 
-     "code": "aao",  
-     "type": "counter" 
-    },
-    { 
-      "name": "Ramp Pattern Complete",      
-     "code": "arp",  
-     "type": "bool" 
-    },
-    { 
-      "name": "Park in Base at End of Auto", 
-     "code": "apb", 
-     "type": "bool" 
-    }
-  ],
-  "teleop": [
-      { 
-         "name": "Artifacts Classified",  
-         "code": "tac",  
-         "type": "counter" 
-      },
-      { 
-      "name": "Artifacts Overflowed",  
-      "code": "tao",  
-      "type": "counter" 
-      },
-      { 
-      "name": "Ramp Pattern Complete", 
-        "code": "trp",  
-        "type": "bool" 
-      }
-  ],
-  "endgame": [
-    { "name": "Robot in Base",         
-      "code": "erb", 
-     "type": "bool" 
-    }
-  ],
-  "postmatch": [
-    { "name": "Comments", 
-     "code": "co", 
-     "type": "radio",
-      "choices": {
-        "l": "Lost Connection",
-        "d": "Disabled by Ref",
-        "b": "Breakdown",
-        "u": "Uphill Push",
-        "x": "None"
-      },
-      "defaultValue": "x"
-    }
-  ]
+    ],
+    "auton": [
+        {
+            "name": "Moved off Launch Line",
+            "code": "aml",
+            "type": "bool"
+        },
+        {
+            "name": "Artifacts Classified",
+            "code": "aac",
+            "type": "counter"
+        },
+        {
+            "name": "Artifacts Overflowed",
+            "code": "aao",
+            "type": "counter"
+        },
+        {
+            "name": "Ramp Pattern Complete",
+            "code": "arp",
+            "type": "bool"
+        },
+        {
+            "name": "Park in Base at End of Auto",
+            "code": "apb",
+            "type": "bool"
+        }
+    ],
+    "teleop": [
+        {
+            "name": "Artifacts Classified",
+            "code": "tac",
+            "type": "counter"
+        },
+        {
+            "name": "Artifacts Overflowed",
+            "code": "tao",
+            "type": "counter"
+        },
+        {
+            "name": "Ramp Pattern Complete",
+            "code": "trp",
+            "type": "bool"
+        }
+    ],
+    "endgame": [
+        {
+            "name": "Robot in Base",
+            "code": "erb",
+            "type": "bool"
+        }
+    ],
+    "postmatch": [
+        {
+            "name": "Comments",
+            "code": "co",
+            "type": "radio",
+            "choices": {
+                "l": "Lost Connection",
+                "d": "Disabled by Ref",
+                "b": "Breakdown",
+                "u": "Uphill Push",
+                "x": "None"
+            },
+            "defaultValue": "x"
+        }
+    ]
 }`;
